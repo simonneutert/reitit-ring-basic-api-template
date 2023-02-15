@@ -1,4 +1,4 @@
 (ns web.api)
 
 (defn routes [& routes]
-  (apply conj ["/api"] routes))
+  (cons "/api" routes))

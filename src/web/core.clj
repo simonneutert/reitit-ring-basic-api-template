@@ -16,9 +16,9 @@
     ;; router data affecting all routes
     {:data {:coercion   reitit.coercion.spec/coercion
             :muuntaja   m/instance
-            :middleware [parameters/parameters-middleware
+            :middleware [muuntaja/format-middleware
+                         parameters/parameters-middleware
                          rrc/coerce-request-middleware
-                         muuntaja/format-response-middleware
                          rrc/coerce-response-middleware]}})
    (ring/create-default-handler)))
 
